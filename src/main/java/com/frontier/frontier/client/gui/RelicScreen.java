@@ -49,7 +49,7 @@ public class RelicScreen extends AbstractContainerScreen<RelicMenu> {
         // Player portrait.
         if (this.minecraft.player != null) {
             InventoryScreen.renderEntityInInventory(graphics, this.leftPos + 26, this.topPos + 84, 28,
-                    new Vec3(0.0D, 0.0D, 0.0D), 225.0F, 0.0F, this.minecraft.player);
+                    new com.mojang.math.Vector3f(0.0F, 0.0F, 0.0F), 225.0F, 0.0F, this.minecraft.player);
         }
 
         // Slot captions.

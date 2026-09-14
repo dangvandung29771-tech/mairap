@@ -62,8 +62,8 @@ public final class CommonEvents {
                 + 0.04F * cumulative(data.levelOf(ForgedProperty.PRECISION));
         if (chance > 0 && player.getRandom().nextFloat() < chance) {
             float bonus = 0.1F * data.levelOf(ForgedProperty.PRECISION);
-            event.setDamageModifier(Math.max(event.getDamageModifier(), 1.5F + bonus));
-            event.setVanillaCritical(true);
+            event.setDamageMultiplier(Math.max(event.getDamageMultiplier(), 1.5F + bonus));
+            event.setCriticalHit(true);
         }
     }
 
@@ -96,7 +96,7 @@ public final class CommonEvents {
 
         int voidLevel = data.levelOf(ForgedProperty.VOID);
         if (voidLevel > 0) {
-            CompoundTag custom = player.getCustomData();
+            CompoundTag custom = player.getPersistentData();
             int hits = custom.getInt("frontier:voidHits") + 1;
             custom.putInt("frontier:voidHits", hits);
             if (hits >= 4) {
@@ -180,8 +180,8 @@ public final class CommonEvents {
                 event.getLevel().playSound(null, pos, net.minecraft.sounds.SoundEvents.COMPOSTER_FILL_SUCCESS,
                         SoundSource.BLOCKS, 1.0F, 1.0F);
             }
-            event.setUseBlock(net.neoforged.bus.api.Event.Result.DENY);
-            event.setUseItem(net.neoforged.bus.api.Event.Result.DENY);
+            event.setUseBlock(net.neoforged.neoforge.common.util.TriState.FALSE);
+            event.setUseItem(net.neoforged.neoforge.common.util.TriState.FALSE);
             return;
         }
 

@@ -14,6 +14,12 @@ import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 
 public class FrontierComponents {
+    /** StreamCodec for BlockPos (not in vanilla 1.21.1 ByteBufCodecs). */
+    public static final net.minecraft.network.codec.StreamCodec<io.netty.buffer.ByteBuf, BlockPos> BLOCK_POS_STREAM_CODEC =
+            net.minecraft.network.codec.StreamCodec.of(
+                    (buf, pos) -> buf.writeLong(pos.asLong()),
+                    buf -> BlockPos.of(buf.readLong()));
+
     public static final DeferredRegister<DataComponentType<?>> COMPONENTS =
             DeferredRegister.create(Registries.DATA_COMPONENT_TYPE, FrontierMod.MODID);
 
@@ -23,10 +29,10 @@ public class FrontierComponents {
 
     /** Attuned crypt position for the Explorer Compass. */
     public static final Supplier<DataComponentType<BlockPos>> CRYPT_POS = COMPONENTS.register("crypt_pos",
-            () -> build(builder -> builder.persistent(BlockPos.CODEC).networkSynchronized(ByteBufCodecs.BLOCK_POS)));
+            () -> build(builder -> builder.persistent(BlockPos.CODEC).networkSynchronized(BLOCK_POS_STREAM_CODEC)));
 
     private static <T> DataComponentType<T> build(UnaryOperator<DataComponentType.Builder<T>> op) {
-        return op.apply(DataComponentType.builder()).cacheEncoding().build();
+        return op.apply(DataComponentType.builder()).build();
     }
 
     public static void touch() {

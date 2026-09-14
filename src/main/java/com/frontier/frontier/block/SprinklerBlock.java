@@ -23,6 +23,14 @@ import net.minecraft.world.phys.shapes.VoxelShape;
  * and gently speeding crop growth — without fully automating the farm.
  */
 public class SprinklerBlock extends BaseEntityBlock {
+    private static final com.mojang.serialization.MapCodec<SprinklerBlock> CODEC =
+            com.mojang.serialization.codecs.RecordCodecBuilder.mapCodec(i -> i.group(propertiesCodec()).apply(i, SprinklerBlock::new));
+
+    @Override
+    protected com.mojang.serialization.MapCodec<? extends BaseEntityBlock> codec() {
+        return CODEC;
+    }
+
     public static final int RANGE = 5;
 
     private static final VoxelShape SHAPE = Shapes.or(

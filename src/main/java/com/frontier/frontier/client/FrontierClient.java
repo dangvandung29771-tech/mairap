@@ -30,7 +30,7 @@ import net.neoforged.neoforge.client.event.RegisterGuiLayersEvent;
 import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
-import net.neoforged.neoforge.client.gui.VanillaGuiLayer;
+import net.neoforged.neoforge.client.gui.VanillaGuiLayers;
 import net.neoforged.bus.api.SubscribeEvent;
 import com.frontier.frontier.FrontierMod;
 
@@ -82,6 +82,6 @@ public final class FrontierClient {
     }
 
     private static void onRegisterGuiLayers(RegisterGuiLayersEvent event) {
-        event.registerAbove(VanillaGuiLayer.HOTBAR.id(), FrontierMod.id("airship_hud"), new AirshipHudLayer());
+        event.registerAbove(VanillaGuiLayers.HOTBAR, FrontierMod.id("airship_hud"), new AirshipHudLayer());
     }
 }

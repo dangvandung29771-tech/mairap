@@ -175,8 +175,9 @@ public class GoldDiggerZombie extends Zombie {
     }
 
     @Override
-    protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHit) {
-        super.dropCustomDeathLoot(source, looting, recentlyHit);
+    protected void dropCustomDeathLoot(net.minecraft.server.level.ServerLevel level, DamageSource source, boolean recentlyHit) {
+        super.dropCustomDeathLoot(level, source, recentlyHit);
+        int looting = net.neoforged.neoforge.common.CommonHooks.getLootingLevel(this, source, 0);
         int fragments = 1 + this.random.nextInt(2 + looting);
         for (int i = 0; i < fragments; i++) {
             this.spawnAtLocation(new ItemStack(FrontierItems.GOLD_FRAGMENT.get()));

@@ -14,7 +14,7 @@ import net.minecraft.world.phys.Vec3;
  * Compact flight instrument shown while piloting the pocket airship:
  * fuel gauge, altitude, speed and engine state.
  */
-public class AirshipHudLayer implements net.neoforged.neoforge.client.gui.LayeredDraw.Layer {
+public class AirshipHudLayer implements net.minecraft.client.gui.LayeredDraw.Layer {
     private static final ResourceLocation TEXTURE = FrontierMod.id("textures/gui/airship_hud.png");
 
     @Override

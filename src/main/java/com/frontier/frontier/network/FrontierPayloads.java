@@ -16,7 +16,6 @@ import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
-import net.neoforged.neoforge.network.NetworkHooks;
 
 /** Client → server payloads. All gameplay mutations happen server-side. */
 public final class FrontierPayloads {
@@ -27,7 +26,7 @@ public final class FrontierPayloads {
         public static final Type<ForgeButtonPayload> TYPE =
                 new Type<>(FrontierMod.id("forge_button"));
         public static final StreamCodec<ByteBuf, ForgeButtonPayload> STREAM_CODEC =
-                StreamCodec.composite(ByteBufCodecs.BLOCK_POS, ForgeButtonPayload::pos, ForgeButtonPayload::new);
+                StreamCodec.composite(com.frontier.frontier.init.FrontierComponents.BLOCK_POS_STREAM_CODEC, ForgeButtonPayload::pos, ForgeButtonPayload::new);
 
         @Override
         public Type<? extends CustomPacketPayload> type() {
@@ -85,7 +84,7 @@ public final class FrontierPayloads {
     private static void handleOpenRelics(OpenRelicPayload payload, IPayloadContext context) {
         context.enqueueWork(() -> {
             if (context.player() instanceof ServerPlayer player) {
-                NetworkHooks.openScreen(player, new SimpleMenuProvider(
+                player.openMenu(new SimpleMenuProvider(
                         (id, inv, p) -> new RelicMenu(id, inv),
                         Component.translatable("container.frontier.relics")));
             }

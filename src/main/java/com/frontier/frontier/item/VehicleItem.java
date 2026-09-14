@@ -21,9 +21,9 @@ import java.util.function.Supplier;
 
 /** Deploys a Frontier vehicle entity at the aimed location. */
 public class VehicleItem extends Item {
-    private final Supplier<EntityType<? extends Entity>> entityType;
+    private final Supplier<? extends EntityType<? extends Entity>> entityType;
 
-    public VehicleItem(Properties properties, Supplier<EntityType<? extends Entity>> entityType) {
+    public VehicleItem(Properties properties, Supplier<? extends EntityType<? extends Entity>> entityType) {
         super(properties.stacksTo(1));
         this.entityType = entityType;
     }

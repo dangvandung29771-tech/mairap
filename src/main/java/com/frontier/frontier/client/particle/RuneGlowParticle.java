@@ -3,6 +3,7 @@ package com.frontier.frontier.client.particle;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.client.particle.ParticleProvider;
+import net.minecraft.client.particle.ParticleRenderType;
 import net.minecraft.client.particle.SpriteSet;
 import net.minecraft.client.particle.TextureSheetParticle;
 import net.minecraft.core.particles.SimpleParticleType;
@@ -24,6 +25,11 @@ public class RuneGlowParticle extends TextureSheetParticle {
         this.gCol = 0.85F;
         this.bCol = 0.9F;
         this.hasPhysics = false;
+    }
+
+    @Override
+    public ParticleRenderType getRenderType() {
+        return ParticleRenderType.PARTICLE_SHEET_TRANSLUCENT;
     }
 
     @Override

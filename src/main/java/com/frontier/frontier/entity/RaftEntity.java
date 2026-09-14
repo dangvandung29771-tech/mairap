@@ -55,7 +55,7 @@ public class RaftEntity extends Entity implements HasCustomInventoryScreen {
     }
 
     @Override
-    public double getPassengersRidingOffset() {
+    public double getPassengerRidingOffset() {
         return 0.55D;
     }
 
@@ -73,7 +73,7 @@ public class RaftEntity extends Entity implements HasCustomInventoryScreen {
             float fore = index >= 1 && index <= 2 ? 0.55F : index == 3 ? -0.9F : 0.9F;
             double x = this.getX() + (-side * Mth.cos(offsetAngle * Mth.DEG_TO_RAD) - fore * Mth.sin(offsetAngle * Mth.DEG_TO_RAD));
             double z = this.getZ() + (-side * Mth.sin(offsetAngle * Mth.DEG_TO_RAD) + fore * Mth.cos(offsetAngle * Mth.DEG_TO_RAD));
-            callback.accept(passenger, x, this.getY() + this.getPassengersRidingOffset(), z);
+            callback.accept(passenger, x, this.getY() + this.getPassengerRidingOffset(), z);
             passenger.setYBodyRot(offsetAngle);
         }
     }
@@ -107,13 +107,12 @@ public class RaftEntity extends Entity implements HasCustomInventoryScreen {
     }
 
     @Override
-    public boolean openCustomInventoryScreen(Player player) {
+    public void openCustomInventoryScreen(Player player) {
         if (!this.level().isClientSide) {
             player.openMenu(new SimpleMenuProvider(
-                    (id, inv, p) -> ChestMenu.threeRows(id, inv, chest, 3),
+                    (id, inv, p) -> ChestMenu.threeRows(id, inv, chest),
                     Component.translatable("container.frontier.large_raft")));
         }
-        return true;
     }
 
     @Override
@@ -156,7 +155,7 @@ public class RaftEntity extends Entity implements HasCustomInventoryScreen {
         if (hurt > 0) {
             this.setHurtTime(hurt - 1);
         }
-        if (this.getFallDistance() > 3.0F && this.onGround()) {
+        if (this.fallDistance > 3.0F && this.onGround()) {
             this.playSound(FrontierSounds.RAFT_CREAK.get(), 1.0F, 0.8F);
         }
         if (this.isMoving() && this.tickCount % 14 == 0) {
@@ -238,8 +237,9 @@ public class RaftEntity extends Entity implements HasCustomInventoryScreen {
     }
 
     @Override
-    protected Entity getControllingPassenger() {
-        return this.getPassengers().isEmpty() ? null : this.getPassengers().get(0);
+    public net.minecraft.world.entity.LivingEntity getControllingPassenger() {
+        return this.getPassengers().isEmpty() ? null
+                : this.getPassengers().get(0) instanceof net.minecraft.world.entity.LivingEntity living ? living : null;
     }
 
     public int getHurtTime() {

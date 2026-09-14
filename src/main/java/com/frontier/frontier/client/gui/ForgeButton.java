@@ -20,7 +20,8 @@ public class ForgeButton extends AbstractWidget {
     private final Runnable onPressRunnable;
 
     @Override
-    public void onPress() {
+    public void onClick(double mouseX, double mouseY) {
+        super.onClick(mouseX, mouseY);
         if (this.active) {
             this.onPressRunnable.run();
         }

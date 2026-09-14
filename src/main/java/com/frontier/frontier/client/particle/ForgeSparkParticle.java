@@ -3,6 +3,7 @@ package com.frontier.frontier.client.particle;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.client.particle.ParticleProvider;
+import net.minecraft.client.particle.ParticleRenderType;
 import net.minecraft.client.particle.SpriteSet;
 import net.minecraft.client.particle.TextureSheetParticle;
 import net.minecraft.core.particles.SimpleParticleType;
@@ -22,6 +23,11 @@ public class ForgeSparkParticle extends TextureSheetParticle {
         this.zd = dz * 0.5 + (level.random.nextDouble() - 0.5) * 0.06;
         this.quadSize = 0.06F + level.random.nextFloat() * 0.04F;
         this.setSpriteFromAge(sprites);
+    }
+
+    @Override
+    public ParticleRenderType getRenderType() {
+        return ParticleRenderType.PARTICLE_SHEET_TRANSLUCENT;
     }
 
     @Override

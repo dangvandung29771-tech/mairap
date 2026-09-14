@@ -26,7 +26,7 @@ public abstract class CryptStructure extends Structure {
     protected abstract StructurePiece createPiece(BlockPos pos);
 
     @Override
-    public int maxDistanceFromCenter() {
+    protected int maxDistanceFromCenter() {
         return 32;
     }
 }

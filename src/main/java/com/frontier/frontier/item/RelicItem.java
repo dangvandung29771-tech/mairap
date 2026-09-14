@@ -12,8 +12,8 @@ import java.util.List;
 /** Base class for the six Frontier relics. Relics are equipped in the two
  *  relic slots of the Relic Pouch (or in Curios charm slots when present). */
 public class RelicItem extends Item {
-    public static final Rarity RELIC_RARITY = Rarity.create("frontier_relic", ChatFormatting.GOLD);
-    public static final Rarity RELIC_RARITY_EPIC = Rarity.create("frontier_relic_epic", ChatFormatting.LIGHT_PURPLE);
+    public static final Rarity RELIC_RARITY = Rarity.RARE;
+    public static final Rarity RELIC_RARITY_EPIC = Rarity.EPIC;
 
     private final boolean epic;
 

@@ -14,18 +14,18 @@ public class FrontierItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.Items.createItems(FrontierMod.MODID);
 
     // === Block items ===
-    public static final DeferredItem<Item> MASTER_GRINDSTONE_ITEM = ITEMS.registerSimpleBlockItem(FrontierBlocks.MASTER_GRINDSTONE);
-    public static final DeferredItem<Item> ANCIENT_STONE_ITEM = ITEMS.registerSimpleBlockItem(FrontierBlocks.ANCIENT_STONE);
-    public static final DeferredItem<Item> ANCIENT_STONE_BRICKS_ITEM = ITEMS.registerSimpleBlockItem(FrontierBlocks.ANCIENT_STONE_BRICKS);
-    public static final DeferredItem<Item> CRACKED_ANCIENT_STONE_BRICKS_ITEM = ITEMS.registerSimpleBlockItem(FrontierBlocks.CRACKED_ANCIENT_STONE_BRICKS);
-    public static final DeferredItem<Item> CHISELED_ANCIENT_STONE_ITEM = ITEMS.registerSimpleBlockItem(FrontierBlocks.CHISELED_ANCIENT_STONE);
-    public static final DeferredItem<Item> ANCIENT_RUNE_ITEM = ITEMS.registerSimpleBlockItem(FrontierBlocks.ANCIENT_RUNE_BLOCK);
-    public static final DeferredItem<Item> ANCIENT_SECRET_DOOR_ITEM = ITEMS.registerSimpleBlockItem(FrontierBlocks.ANCIENT_SECRET_DOOR);
-    public static final DeferredItem<Item> SARCOPHAGUS_ITEM = ITEMS.registerSimpleBlockItem(FrontierBlocks.SARCOPHAGUS);
-    public static final DeferredItem<Item> WOOD_CANAL_ITEM = ITEMS.registerSimpleBlockItem(FrontierBlocks.WOOD_CANAL);
-    public static final DeferredItem<Item> STONE_PIPE_ITEM = ITEMS.registerSimpleBlockItem(FrontierBlocks.STONE_PIPE);
-    public static final DeferredItem<Item> SPRINKLER_ITEM = ITEMS.registerSimpleBlockItem(FrontierBlocks.SPRINKLER);
-    public static final DeferredItem<Item> ENRICHED_FARMLAND_ITEM = ITEMS.registerSimpleBlockItem(FrontierBlocks.ENRICHED_FARMLAND);
+    public static final DeferredItem<net.minecraft.world.item.BlockItem> MASTER_GRINDSTONE_ITEM = ITEMS.registerSimpleBlockItem(FrontierBlocks.MASTER_GRINDSTONE);
+    public static final DeferredItem<net.minecraft.world.item.BlockItem> ANCIENT_STONE_ITEM = ITEMS.registerSimpleBlockItem(FrontierBlocks.ANCIENT_STONE);
+    public static final DeferredItem<net.minecraft.world.item.BlockItem> ANCIENT_STONE_BRICKS_ITEM = ITEMS.registerSimpleBlockItem(FrontierBlocks.ANCIENT_STONE_BRICKS);
+    public static final DeferredItem<net.minecraft.world.item.BlockItem> CRACKED_ANCIENT_STONE_BRICKS_ITEM = ITEMS.registerSimpleBlockItem(FrontierBlocks.CRACKED_ANCIENT_STONE_BRICKS);
+    public static final DeferredItem<net.minecraft.world.item.BlockItem> CHISELED_ANCIENT_STONE_ITEM = ITEMS.registerSimpleBlockItem(FrontierBlocks.CHISELED_ANCIENT_STONE);
+    public static final DeferredItem<net.minecraft.world.item.BlockItem> ANCIENT_RUNE_ITEM = ITEMS.registerSimpleBlockItem(FrontierBlocks.ANCIENT_RUNE_BLOCK);
+    public static final DeferredItem<net.minecraft.world.item.BlockItem> ANCIENT_SECRET_DOOR_ITEM = ITEMS.registerSimpleBlockItem(FrontierBlocks.ANCIENT_SECRET_DOOR);
+    public static final DeferredItem<net.minecraft.world.item.BlockItem> SARCOPHAGUS_ITEM = ITEMS.registerSimpleBlockItem(FrontierBlocks.SARCOPHAGUS);
+    public static final DeferredItem<net.minecraft.world.item.BlockItem> WOOD_CANAL_ITEM = ITEMS.registerSimpleBlockItem(FrontierBlocks.WOOD_CANAL);
+    public static final DeferredItem<net.minecraft.world.item.BlockItem> STONE_PIPE_ITEM = ITEMS.registerSimpleBlockItem(FrontierBlocks.STONE_PIPE);
+    public static final DeferredItem<net.minecraft.world.item.BlockItem> SPRINKLER_ITEM = ITEMS.registerSimpleBlockItem(FrontierBlocks.SPRINKLER);
+    public static final DeferredItem<net.minecraft.world.item.BlockItem> ENRICHED_FARMLAND_ITEM = ITEMS.registerSimpleBlockItem(FrontierBlocks.ENRICHED_FARMLAND);
 
     // === Forging materials ===
     public static final DeferredItem<ForgingMaterialItem> SHARP_WHETSTONE = ITEMS.registerItem("sharp_whetstone",

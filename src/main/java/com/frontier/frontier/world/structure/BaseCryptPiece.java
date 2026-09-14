@@ -82,7 +82,7 @@ public abstract class BaseCryptPiece extends StructurePiece {
         }
         level.setBlock(pos, Blocks.SPAWNER.defaultBlockState(), 2);
         if (level.getBlockEntity(pos) instanceof SpawnerBlockEntity spawner) {
-            spawner.setEntityId(type, null, level.getRandom(), pos);
+            spawner.setEntityId(type, level.getRandom());
         }
     }
 
@@ -102,10 +102,10 @@ public abstract class BaseCryptPiece extends StructurePiece {
     }
 
     @Override
-    public void postProcess(WorldGenLevel level, ChunkGenerator generator, RandomState randomState,
-                            StructureTemplateManager structureTemplateManager, int chunkX, int chunkZ,
-                            net.minecraft.world.level.chunk.ChunkAccess chunk, BlockPos pos, BoundingBox box) {
-        build(level, box, level.getRandom());
+    public void postProcess(WorldGenLevel level, StructureManager structureManager,
+                            ChunkGenerator generator, RandomSource random, BoundingBox box,
+                            net.minecraft.world.level.ChunkPos chunkPos, BlockPos origin) {
+        build(level, box, random);
     }
 
     /** Hand-designed layout for this crypt type. */

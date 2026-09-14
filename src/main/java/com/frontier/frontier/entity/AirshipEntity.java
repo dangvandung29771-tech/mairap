@@ -77,7 +77,7 @@ public class AirshipEntity extends Entity {
     }
 
     @Override
-    public double getPassengersRidingOffset() {
+    public double getPassengerRidingOffset() {
         return 0.72D;
     }
 
@@ -132,13 +132,13 @@ public class AirshipEntity extends Entity {
         if (this.isInvulnerableTo(source) || this.level().isClientSide) {
             return false;
         }
-        this.ejectPassengers();
+        this.ejectAllPassengers();
         this.spawnAtLocation(new ItemStack(FrontierItems.POCKET_AIRSHIP.get()));
         this.discard();
         return true;
     }
 
-    private void ejectPassengers() {
+    private void ejectAllPassengers() {
         for (Entity passenger : this.getPassengers()) {
             passenger.stopRiding();
         }
@@ -253,8 +253,9 @@ public class AirshipEntity extends Entity {
     }
 
     @Override
-    protected Entity getControllingPassenger() {
-        return this.getPassengers().isEmpty() ? null : this.getPassengers().get(0);
+    public net.minecraft.world.entity.LivingEntity getControllingPassenger() {
+        return this.getPassengers().isEmpty() ? null
+                : this.getPassengers().get(0) instanceof net.minecraft.world.entity.LivingEntity living ? living : null;
     }
 
     @Override

@@ -32,13 +32,20 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.neoforged.neoforge.network.NetworkHooks;
 
 /**
  * The Master Grindstone workstation: stone + dark metal construction with a
  * rotating grinding wheel (rendered by the block entity renderer).
  */
 public class MasterGrindstoneBlock extends BaseEntityBlock {
+    private static final com.mojang.serialization.MapCodec<MasterGrindstoneBlock> CODEC =
+            com.mojang.serialization.codecs.RecordCodecBuilder.mapCodec(i -> i.group(propertiesCodec()).apply(i, MasterGrindstoneBlock::new));
+
+    @Override
+    protected com.mojang.serialization.MapCodec<? extends BaseEntityBlock> codec() {
+        return CODEC;
+    }
+
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
     public static final BooleanProperty ACTIVE = BlockStateProperties.LIT;
 
@@ -91,7 +98,7 @@ public class MasterGrindstoneBlock extends BaseEntityBlock {
             return ItemInteractionResult.SUCCESS;
         }
         if (level.getBlockEntity(pos) instanceof MasterGrindstoneBlockEntity grindstone) {
-            NetworkHooks.openScreen((ServerPlayer) player, grindstone, pos);
+            ((ServerPlayer) player).openMenu(grindstone, pos);
             level.playSound(null, pos, FrontierSounds.GRINDSTONE_IMPACT.get(), SoundSource.BLOCKS, 0.4F, 1.2F);
         }
         return ItemInteractionResult.CONSUME;

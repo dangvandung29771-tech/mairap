@@ -121,7 +121,7 @@ public class CopperShieldSkeleton extends Monster {
     public boolean hurt(DamageSource source, float amount) {
         Entity attacker = source.getEntity();
         if (attacker instanceof LivingEntity living && !this.level().isClientSide
-                && this.blockCooldown <= 0 && this.isFacing(attacker) && !source.is(net.minecraft.tags.damageType.DamageTypeTags.IS_PROJECTILE)
+                && this.blockCooldown <= 0 && this.isFacing(attacker) && !source.is(net.minecraft.tags.DamageTypeTags.IS_PROJECTILE)
                 && this.random.nextFloat() < 0.65F) {
             // Shield block: negate the hit, spark the copper, reset.
             this.blockCooldown = 45;
@@ -173,8 +173,9 @@ public class CopperShieldSkeleton extends Monster {
     }
 
     @Override
-    protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHit) {
-        super.dropCustomDeathLoot(source, looting, recentlyHit);
+    protected void dropCustomDeathLoot(net.minecraft.server.level.ServerLevel level, DamageSource source, boolean recentlyHit) {
+        super.dropCustomDeathLoot(level, source, recentlyHit);
+        int looting = net.neoforged.neoforge.common.CommonHooks.getLootingLevel(this, source, 0);
         int bones = this.random.nextInt(2 + looting);
         for (int i = 0; i < bones; i++) {
             this.spawnAtLocation(Items.BONE);

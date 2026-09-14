@@ -25,11 +25,11 @@ public class FrontierStructures {
             STRUCTURE_TYPES.register("royal_tomb", () -> () -> RoyalTombStructure.CODEC);
 
     public static final Supplier<StructurePieceType> FALLEN_BARRACKS_PIECE =
-            STRUCTURE_PIECE_TYPES.register("fallen_barracks_piece", () -> new StructurePieceType(FallenBarracksPiece::new));
+            STRUCTURE_PIECE_TYPES.register("fallen_barracks_piece", () -> (StructurePieceType) FallenBarracksPiece::new);
     public static final Supplier<StructurePieceType> FORGOTTEN_MINE_PIECE =
-            STRUCTURE_PIECE_TYPES.register("forgotten_mine_piece", () -> new StructurePieceType(ForgottenMinePiece::new));
+            STRUCTURE_PIECE_TYPES.register("forgotten_mine_piece", () -> (StructurePieceType) ForgottenMinePiece::new);
     public static final Supplier<StructurePieceType> RITUAL_CRYPT_PIECE =
-            STRUCTURE_PIECE_TYPES.register("ritual_crypt_piece", () -> new StructurePieceType(RitualCryptPiece::new));
+            STRUCTURE_PIECE_TYPES.register("ritual_crypt_piece", () -> (StructurePieceType) RitualCryptPiece::new);
     public static final Supplier<StructurePieceType> ROYAL_TOMB_PIECE =
-            STRUCTURE_PIECE_TYPES.register("royal_tomb_piece", () -> new StructurePieceType(RoyalTombPiece::new));
+            STRUCTURE_PIECE_TYPES.register("royal_tomb_piece", () -> (StructurePieceType) RoyalTombPiece::new);
 }

@@ -5,7 +5,7 @@ import net.minecraft.client.animation.AnimationChannel;
 import net.minecraft.client.animation.AnimationDefinition;
 import net.minecraft.client.animation.Keyframe;
 import net.minecraft.client.animation.KeyframeAnimations;
-import net.minecraft.client.model.EntityModel;
+import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.CubeDeformation;
@@ -19,7 +19,7 @@ import net.minecraft.util.Mth;
  * Skeletal guardian with corroded copper shield and worn armor plating.
  * Vanilla-proportioned (32px tall), keyframe-animated.
  */
-public class CopperShieldSkeletonModel extends EntityModel<CopperShieldSkeleton> {
+public class CopperShieldSkeletonModel extends HierarchicalModel<CopperShieldSkeleton> {
     private final ModelPart root;
     private final ModelPart head;
     private final ModelPart body;
@@ -86,12 +86,12 @@ public class CopperShieldSkeletonModel extends EntityModel<CopperShieldSkeleton>
     }
 
     public static final AnimationDefinition IDLE = AnimationDefinition.Builder.withLength(2.0F).looping()
-            .addAnimation("body", new AnimationChannel(new Keyframe[]{
+            .addAnimation("body", new AnimationChannel(AnimationChannel.Targets.ROTATION, new Keyframe[]{
                     new Keyframe(0.0F, KeyframeAnimations.degreeVec(0, 0, 0), AnimationChannel.Interpolations.LINEAR),
                     new Keyframe(1.0F, KeyframeAnimations.degreeVec(2.0F, 0, 1.0F), AnimationChannel.Interpolations.LINEAR),
                     new Keyframe(2.0F, KeyframeAnimations.degreeVec(0, 0, 0), AnimationChannel.Interpolations.LINEAR)
             }))
-            .addAnimation("arm_left", new AnimationChannel(new Keyframe[]{
+            .addAnimation("arm_left", new AnimationChannel(AnimationChannel.Targets.ROTATION, new Keyframe[]{
                     new Keyframe(0.0F, KeyframeAnimations.degreeVec(-4.0F, 0, 0), AnimationChannel.Interpolations.LINEAR),
                     new Keyframe(1.0F, KeyframeAnimations.degreeVec(3.0F, 0, 0), AnimationChannel.Interpolations.LINEAR),
                     new Keyframe(2.0F, KeyframeAnimations.degreeVec(-4.0F, 0, 0), AnimationChannel.Interpolations.LINEAR)
@@ -99,7 +99,7 @@ public class CopperShieldSkeletonModel extends EntityModel<CopperShieldSkeleton>
             .build();
 
     public static final AnimationDefinition ATTACK = AnimationDefinition.Builder.withLength(0.55F)
-            .addAnimation("arm_right", new AnimationChannel(new Keyframe[]{
+            .addAnimation("arm_right", new AnimationChannel(AnimationChannel.Targets.ROTATION, new Keyframe[]{
                     new Keyframe(0.0F, KeyframeAnimations.degreeVec(0, 0, 0), AnimationChannel.Interpolations.LINEAR),
                     // anticipation: draw back
                     new Keyframe(0.16F, KeyframeAnimations.degreeVec(-135.0F, 0, -14.0F), AnimationChannel.Interpolations.LINEAR),
@@ -110,7 +110,7 @@ public class CopperShieldSkeletonModel extends EntityModel<CopperShieldSkeleton>
                     // recovery
                     new Keyframe(0.55F, KeyframeAnimations.degreeVec(0, 0, 0), AnimationChannel.Interpolations.LINEAR)
             }))
-            .addAnimation("body", new AnimationChannel(new Keyframe[]{
+            .addAnimation("body", new AnimationChannel(AnimationChannel.Targets.ROTATION, new Keyframe[]{
                     new Keyframe(0.10F, KeyframeAnimations.degreeVec(0, -12.0F, 0), AnimationChannel.Interpolations.LINEAR),
                     new Keyframe(0.30F, KeyframeAnimations.degreeVec(4.0F, 14.0F, 0), AnimationChannel.Interpolations.LINEAR),
                     new Keyframe(0.55F, KeyframeAnimations.degreeVec(0, 0, 0), AnimationChannel.Interpolations.LINEAR)
@@ -118,7 +118,7 @@ public class CopperShieldSkeletonModel extends EntityModel<CopperShieldSkeleton>
             .build();
 
     public static final AnimationDefinition BLOCK = AnimationDefinition.Builder.withLength(0.9F)
-            .addAnimation("arm_left", new AnimationChannel(new Keyframe[]{
+            .addAnimation("arm_left", new AnimationChannel(AnimationChannel.Targets.ROTATION, new Keyframe[]{
                     new Keyframe(0.0F, KeyframeAnimations.degreeVec(0, 0, 0), AnimationChannel.Interpolations.LINEAR),
                     new Keyframe(0.14F, KeyframeAnimations.degreeVec(-88.0F, 0, -10.0F), AnimationChannel.Interpolations.LINEAR),
                     new Keyframe(0.20F, KeyframeAnimations.degreeVec(-80.0F, 0, -8.0F), AnimationChannel.Interpolations.LINEAR),
@@ -128,12 +128,12 @@ public class CopperShieldSkeletonModel extends EntityModel<CopperShieldSkeleton>
             .build();
 
     public static final AnimationDefinition HIT = AnimationDefinition.Builder.withLength(0.4F)
-            .addAnimation("body", new AnimationChannel(new Keyframe[]{
+            .addAnimation("body", new AnimationChannel(AnimationChannel.Targets.ROTATION, new Keyframe[]{
                     new Keyframe(0.0F, KeyframeAnimations.degreeVec(0, 0, 0), AnimationChannel.Interpolations.LINEAR),
                     new Keyframe(0.10F, KeyframeAnimations.degreeVec(-10.0F, 0, -3.0F), AnimationChannel.Interpolations.LINEAR),
                     new Keyframe(0.4F, KeyframeAnimations.degreeVec(0, 0, 0), AnimationChannel.Interpolations.LINEAR)
             }))
-            .addAnimation("head", new AnimationChannel(new Keyframe[]{
+            .addAnimation("head", new AnimationChannel(AnimationChannel.Targets.ROTATION, new Keyframe[]{
                     new Keyframe(0.0F, KeyframeAnimations.degreeVec(0, 0, 0), AnimationChannel.Interpolations.LINEAR),
                     new Keyframe(0.08F, KeyframeAnimations.degreeVec(-14.0F, 6.0F, 0), AnimationChannel.Interpolations.LINEAR),
                     new Keyframe(0.4F, KeyframeAnimations.degreeVec(0, 0, 0), AnimationChannel.Interpolations.LINEAR)
@@ -152,10 +152,10 @@ public class CopperShieldSkeletonModel extends EntityModel<CopperShieldSkeleton>
         this.legRight.xRot = Mth.cos(limbSwing * 0.6662F) * 1.2F * limbSwingAmount;
         this.legLeft.xRot = Mth.cos(limbSwing * 0.6662F + (float) Math.PI) * 1.2F * limbSwingAmount;
 
-        this.animate(entity.idleState, IDLE, ageInTicks);
-        this.animate(entity.attackState, ATTACK, ageInTicks);
-        this.animate(entity.blockState, BLOCK, ageInTicks);
-        this.animate(entity.hitState, HIT, ageInTicks);
+        this.animate(entity.idleState, IDLE, ageInTicks, 1.0F);
+        this.animate(entity.attackState, ATTACK, ageInTicks, 1.0F);
+        this.animate(entity.blockState, BLOCK, ageInTicks, 1.0F);
+        this.animate(entity.hitState, HIT, ageInTicks, 1.0F);
     }
 
     @Override
