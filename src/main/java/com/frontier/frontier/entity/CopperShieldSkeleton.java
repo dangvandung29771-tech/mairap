@@ -49,7 +49,6 @@ public class CopperShieldSkeleton extends Monster {
     public final AnimationState hitState = new AnimationState();
 
     private int blockCooldown = 0;
-    private int attackCooldown = 0;
 
     public CopperShieldSkeleton(EntityType<? extends CopperShieldSkeleton> type, Level level) {
         super(type, level);
@@ -88,28 +87,47 @@ public class CopperShieldSkeleton extends Monster {
             this.setupAnimationStates();
             return;
         }
-        if (blockCooldown > 0) blockCooldown--;
-        if (attackCooldown > 0) attackCooldown--;
-        if (this.tickCount % 40 == 0 && !this.entityData.get(DATA_BLOCKING)) {
-            this.entityData.set(DATA_BLOCKING, this.getTarget() != null && this.random.nextBoolean());
+        if (blockCooldown > 0) {
+            blockCooldown--;
+        }
+        // Guard logic: shield raised while a target is near and the guard was not
+        // recently broken. Deliberately stable - no random flipping (that caused
+        // the twitchy shield on earlier builds).
+        LivingEntity target = this.getTarget();
+        boolean shouldGuard = this.blockCooldown <= 0 && target != null
+                && this.distanceToSqr(target) < 49.0D;
+        if (this.entityData.get(DATA_BLOCKING) != shouldGuard) {
+            this.entityData.set(DATA_BLOCKING, shouldGuard);
         }
     }
 
     private void setupAnimationStates() {
-        this.idleState.animateWhen(this.tickCount > 0 && !this.attackState.isStarted() && !this.blockState.isStarted(), this.tickCount);
-        LivingEntity target = this.getTarget();
-        if (target != null && this.attackCooldown <= 0 && this.distanceToSqr(target) < 4.0D) {
-            this.attackCooldown = 24;
+        // Idle never stops: attack/block/flinch layers blend on top of it, so the
+        // pose never snaps back to zero mid-motion.
+        this.idleState.animateWhen(true, this.tickCount);
+
+        // Attack follows the synced swing flag (server -> client automatic).
+        if (this.swinging && !this.attackState.isStarted()) {
             this.attackState.animateWhen(true, this.tickCount);
         }
-        if (this.attackState.isStarted() && this.attackState.getAccumulatedTime() > 600) {
+        if (this.attackState.isStarted() && !this.swinging && this.attackState.getAccumulatedTime() > 550L) {
             this.attackState.stop();
         }
+
+        // Guard raise/lower follows the synced guard flag.
         if (this.entityData.get(DATA_BLOCKING) && !this.blockState.isStarted()) {
             this.blockState.animateWhen(true, this.tickCount);
         }
-        if (!this.entityData.get(DATA_BLOCKING) && this.blockState.isStarted() && this.blockState.getAccumulatedTime() > 900) {
+        if (!this.entityData.get(DATA_BLOCKING) && this.blockState.isStarted() && this.blockState.getAccumulatedTime() > 900L) {
             this.blockState.stop();
+        }
+
+        // Flinch follows the synced hurt timer.
+        if (this.hurtTime > 0 && !this.hitState.isStarted()) {
+            this.hitState.animateWhen(true, this.tickCount);
+        }
+        if (this.hitState.isStarted() && this.hitState.getAccumulatedTime() > 400L) {
+            this.hitState.stop();
         }
     }
 
@@ -124,19 +142,13 @@ public class CopperShieldSkeleton extends Monster {
                 && this.blockCooldown <= 0 && this.isFacing(attacker) && !source.is(net.minecraft.tags.DamageTypeTags.IS_PROJECTILE)
                 && this.random.nextFloat() < 0.65F) {
             // Shield block: negate the hit, spark the copper, reset.
-            this.blockCooldown = 45;
-            this.entityData.set(DATA_BLOCKING, true);
-            this.blockState.stop();
-            this.blockState.animateWhen(true, this.tickCount);
+            this.blockCooldown = 50; // guard broken: ~2.5s punishment window
+            this.entityData.set(DATA_BLOCKING, false);
             this.playSound(SoundEvents.SHIELD_BLOCK, 1.0F, 0.8F);
             this.playSound(FrontierSounds.GRINDSTONE_IMPACT.get(), 0.3F, 1.6F);
             Vec3 knock = living.position().subtract(this.position()).normalize().scale(0.3D);
             living.knockback(0.25D, -knock.x, -knock.z);
             return false;
-        }
-        this.entityData.set(DATA_BLOCKING, false);
-        if (!this.hitState.isStarted()) {
-            this.hitState.animateWhen(true, this.tickCount);
         }
         return super.hurt(source, amount);
     }
@@ -145,16 +157,6 @@ public class CopperShieldSkeleton extends Monster {
         Vec3 look = this.getViewVector(1.0F);
         Vec3 toAttacker = entity.position().subtract(this.position()).normalize();
         return look.dot(toAttacker) > 0.35D;
-    }
-
-    @Override
-    public boolean doHurtTarget(Entity target) {
-        boolean hit = super.doHurtTarget(target);
-        if (hit) {
-            this.attackState.stop();
-            this.attackState.animateWhen(true, this.tickCount);
-        }
-        return hit;
     }
 
     @Override

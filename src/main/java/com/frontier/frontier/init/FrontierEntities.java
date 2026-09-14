@@ -33,16 +33,16 @@ public class FrontierEntities {
     public static final Supplier<EntityType<CopperShieldSkeleton>> COPPER_SHIELD_SKELETON =
             ENTITY_TYPES.register("copper_shield_skeleton",
                     () -> EntityType.Builder.<CopperShieldSkeleton>of(CopperShieldSkeleton::new, MobCategory.MONSTER)
-                            .sized(0.7F, 2.1F)
-                            .eyeHeight(1.74F)
+                            .sized(0.6F, 1.6F)
+                            .eyeHeight(1.42F)
                             .clientTrackingRange(8)
                             .build("copper_shield_skeleton"));
 
     public static final Supplier<EntityType<GoldDiggerZombie>> GOLD_DIGGER_ZOMBIE =
             ENTITY_TYPES.register("gold_digger_zombie",
                     () -> EntityType.Builder.<GoldDiggerZombie>of(GoldDiggerZombie::new, MobCategory.MONSTER)
-                            .sized(0.7F, 2.05F)
-                            .eyeHeight(1.74F)
+                            .sized(0.6F, 1.6F)
+                            .eyeHeight(1.42F)
                             .clientTrackingRange(8)
                             .build("gold_digger_zombie"));
 }

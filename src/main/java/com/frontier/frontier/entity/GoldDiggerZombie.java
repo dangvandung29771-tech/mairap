@@ -81,24 +81,23 @@ public class GoldDiggerZombie extends Zombie {
             if (!this.idleState.isStarted()) {
                 this.idleState.animateWhen(true, this.tickCount);
             }
+            // Attack swing follows the synced swing flag instead of server-side
+            // AnimationState calls (which never reached the client).
+            if (this.swinging && !this.swingState.isStarted()) {
+                this.swingState.animateWhen(true, this.tickCount);
+            }
+            if (!this.swinging && this.swingState.isStarted() && this.swingState.getAccumulatedTime() > 500L) {
+                this.swingState.stop();
+            }
             if (this.isDigging() && !this.digState.isStarted()) {
                 this.digState.animateWhen(true, this.tickCount);
             }
-            if (!this.isDigging() && this.digState.isStarted() && this.digState.getAccumulatedTime() > 400) {
+            if (!this.isDigging() && this.digState.isStarted() && this.digState.getAccumulatedTime() > 450L) {
                 this.digState.stop();
             }
         } else if (digCooldown > 0) {
             digCooldown--;
         }
-    }
-
-    @Override
-    public boolean doHurtTarget(net.minecraft.world.entity.Entity target) {
-        boolean hit = super.doHurtTarget(target);
-        if (hit && !this.swingState.isStarted()) {
-            this.swingState.animateWhen(true, this.tickCount);
-        }
-        return hit;
     }
 
     /** Occasionally excavates soft blocks in front of the digger. */
@@ -160,7 +159,6 @@ public class GoldDiggerZombie extends Zombie {
         @Override
         public void stop() {
             GoldDiggerZombie.this.entityData.set(DATA_DIGGING, false);
-            GoldDiggerZombie.this.digState.stop();
             if (!GoldDiggerZombie.this.level().isClientSide
                     && !GoldDiggerZombie.this.level().getBlockState(target).isAir()) {
                 GoldDiggerZombie.this.level().destroyBlock(target, true);

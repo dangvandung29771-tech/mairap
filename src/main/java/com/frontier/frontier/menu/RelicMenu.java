@@ -19,8 +19,8 @@ public class RelicMenu extends AbstractContainerMenu {
         this.relics = new RelicInventory(playerInventory.player);
         relics.startOpen(playerInventory.player);
 
-        addSlot(new RelicSlot(relics, 0, 44, 38));
-        addSlot(new RelicSlot(relics, 1, 116, 38));
+        addSlot(new RelicSlot(relics, 0, 60, 30));
+        addSlot(new RelicSlot(relics, 1, 100, 30));
 
         for (int row = 0; row < 3; row++) {
             for (int col = 0; col < 9; col++) {

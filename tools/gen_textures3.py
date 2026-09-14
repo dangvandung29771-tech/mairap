@@ -85,14 +85,14 @@ noisy(d, img, 3, 3, 172, 18, (58, 46, 32), 5)
 # portrait recess
 d.rectangle([10, 24, 46, 86], fill=(30, 26, 20))
 d.rectangle([11, 25, 45, 85], outline=(96, 80, 56))
-# two relic sockets (gold-rimmed)
-for sx in [44, 116]:
-    slot(img, sx, 38)
-    d.rectangle([sx - 2, 36, sx + 17, 55], outline=(184, 148, 74))
-    d.point((sx - 2, 36), fill=(240, 214, 140)); d.point((sx + 17, 36), fill=(240, 214, 140))
-    d.point((sx - 2, 55), fill=(240, 214, 140)); d.point((sx + 17, 55), fill=(240, 214, 140))
-# right parchment panel (active relics)
-parchment(img, 58, 24, 168, 92)
+# two relic sockets (gold-rimmed) side by side, clear of the parchment list
+for sx in [60, 100]:
+    slot(img, sx, 30)
+    d.rectangle([sx - 2, 28, sx + 19, 49], outline=(184, 148, 74))
+    d.point((sx - 2, 28), fill=(240, 214, 140)); d.point((sx + 19, 28), fill=(240, 214, 140))
+    d.point((sx - 2, 49), fill=(240, 214, 140)); d.point((sx + 19, 49), fill=(240, 214, 140))
+# parchment strip (active relics list)
+parchment(img, 58, 62, 168, 96)
 save(img, 'gui/relic_pouch.png')
 
 # ============ AIRSHIP HUD (128x64) ============
