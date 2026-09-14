@@ -76,7 +76,6 @@ public class AirshipEntity extends Entity {
         this.inputDescend = descend;
     }
 
-    @Override
     public double getPassengerRidingOffset() {
         return 0.72D;
     }

@@ -2,7 +2,7 @@ package com.frontier.frontier.world.structure;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.levelgen.structure.Structure;
-import net.minecraft.world.level.levelgen.structure.pieces.StructurePiece;
+import net.minecraft.world.level.levelgen.structure.StructurePiece;
 
 /**
  * Base for the four Ancient Crypt structure types. Crypts anchor below the
@@ -25,8 +25,4 @@ public abstract class CryptStructure extends Structure {
 
     protected abstract StructurePiece createPiece(BlockPos pos);
 
-    @Override
-    protected int maxDistanceFromCenter() {
-        return 32;
     }
-}

@@ -54,7 +54,6 @@ public class RaftEntity extends Entity implements HasCustomInventoryScreen {
         builder.define(DATA_HURT, 0);
     }
 
-    @Override
     public double getPassengerRidingOffset() {
         return 0.55D;
     }
