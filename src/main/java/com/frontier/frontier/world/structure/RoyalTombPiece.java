@@ -22,6 +22,10 @@ public class RoyalTombPiece extends BaseCryptPiece {
         super(com.frontier.frontier.init.FrontierStructures.ROYAL_TOMB_PIECE.get(), origin, WIDTH, HEIGHT, DEPTH);
     }
 
+    public RoyalTombPiece(net.minecraft.world.level.levelgen.structure.pieces.StructurePieceSerializationContext context, CompoundTag tag) {
+        this(tag);
+    }
+
     public RoyalTombPiece(CompoundTag tag) {
         super(com.frontier.frontier.init.FrontierStructures.ROYAL_TOMB_PIECE.get(), tag);
     }

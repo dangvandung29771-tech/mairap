@@ -23,6 +23,10 @@ public class RitualCryptPiece extends BaseCryptPiece {
         super(com.frontier.frontier.init.FrontierStructures.RITUAL_CRYPT_PIECE.get(), origin, WIDTH, HEIGHT, DEPTH);
     }
 
+    public RitualCryptPiece(net.minecraft.world.level.levelgen.structure.pieces.StructurePieceSerializationContext context, CompoundTag tag) {
+        this(tag);
+    }
+
     public RitualCryptPiece(CompoundTag tag) {
         super(com.frontier.frontier.init.FrontierStructures.RITUAL_CRYPT_PIECE.get(), tag);
     }

@@ -22,6 +22,10 @@ public class FallenBarracksPiece extends BaseCryptPiece {
         super(com.frontier.frontier.init.FrontierStructures.FALLEN_BARRACKS_PIECE.get(), origin, WIDTH, HEIGHT, DEPTH);
     }
 
+    public FallenBarracksPiece(net.minecraft.world.level.levelgen.structure.pieces.StructurePieceSerializationContext context, CompoundTag tag) {
+        this(tag);
+    }
+
     public FallenBarracksPiece(CompoundTag tag) {
         super(com.frontier.frontier.init.FrontierStructures.FALLEN_BARRACKS_PIECE.get(), tag);
     }

@@ -25,6 +25,10 @@ public class ForgottenMinePiece extends BaseCryptPiece {
         super(com.frontier.frontier.init.FrontierStructures.FORGOTTEN_MINE_PIECE.get(), origin, WIDTH, HEIGHT, DEPTH);
     }
 
+    public ForgottenMinePiece(net.minecraft.world.level.levelgen.structure.pieces.StructurePieceSerializationContext context, CompoundTag tag) {
+        this(tag);
+    }
+
     public ForgottenMinePiece(CompoundTag tag) {
         super(com.frontier.frontier.init.FrontierStructures.FORGOTTEN_MINE_PIECE.get(), tag);
     }
