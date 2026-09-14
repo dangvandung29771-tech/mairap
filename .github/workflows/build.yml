@@ -54,6 +54,23 @@ jobs:
           git commit -m "ci: publish built frontier-1.0.0.jar" || echo "jar unchanged, nothing to commit"
           git push origin HEAD:${{ github.ref_name }}
 
+      - name: Publish GitHub release asset
+        if: env.BUILD_EXIT == '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -e
+          TAG="v1.0.0"
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            gh release create "$TAG" \
+              --target "${{ github.sha }}" \
+              --title "FRONTIER 1.0.0 — Vanilla+ Expansion" \
+              --notes-file RELEASE_NOTES.md || true
+          fi
+          # Replace the jar asset so the release always carries the latest build.
+          gh release delete-asset "$TAG" frontier-1.0.0.jar --yes 2>/dev/null || true
+          gh release upload "$TAG" release/frontier-1.0.0.jar --clobber
+
       - name: Publish build log on failure
         if: env.BUILD_EXIT != '0'
         run: |
