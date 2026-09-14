@@ -85,9 +85,18 @@ and hides when you land.
 
 ---
 
-## Building
+## Getting the jar
 
-Requirements: **JDK 21** and Gradle 8.10 (or run `gradle wrapper` once).
+A ready-to-install, CI-built jar is committed to this repository:
+
+**`release/frontier-1.0.0.jar`** — drop it into your NeoForge `mods/` folder.
+
+It is produced by GitHub Actions on every push (`.github/workflows/build.yml`:
+JDK 21 + Gradle 8.14.2 + ModDevGradle) and re-published automatically.
+
+## Building from source
+
+Requirements: **JDK 21** and Gradle 8.14.2 (or run `gradle wrapper` once).
 
 ```bash
 gradle build          # produces build/libs/frontier-1.0.0.jar
