@@ -17,228 +17,74 @@ Loaded 116 artifacts from /home/runner/work/mairap/mairap/build/tmp/createMinecr
 [1m*** Started working on [4mdownloadJson[0m[0m
   ↓ https://launchermeta.mojang.com/mc/game/version_manifest_v2.json
   ↓ https://piston-meta.mojang.com/v1/packages/c44f2f5ee5b72c3df2de572425f246109365607b/1.21.1.json
- [1m[92m✓[0m Completed [4mdownloadJson[0m in 0.58s
+ [1m[92m✓[0m Completed [4mdownloadJson[0m in 0.48s
 [1m*** Started working on [4mdownloadServer[0m[0m
 [1m*** Started working on [4mdownloadClientMappings[0m[0m
 [1m*** Started working on [4mdownloadClient[0m[0m
 [1m*** Started working on [4mlistLibraries[0m[0m
-  ↓ https://piston-data.mojang.com/v1/objects/2244b6f072256667bcd9a73df124d6c58de77992/client.txt
   ↓ https://piston-data.mojang.com/v1/objects/59353fb40c36d304f2035d51e7d6e6baa98dc05c/server.jar
+  ↓ https://piston-data.mojang.com/v1/objects/2244b6f072256667bcd9a73df124d6c58de77992/client.txt
   ↓ https://piston-data.mojang.com/v1/objects/30c73b1c5da787909b2f73340419fdf13b9def88/client.jar
- [1m[92m✓[0m Completed [4mlistLibraries[0m in 0.03s
- [1m[92m✓[0m Completed [4mdownloadClientMappings[0m in 0.49s
+ [1m[92m✓[0m Completed [4mlistLibraries[0m in 0.04s
+ [1m[92m✓[0m Completed [4mdownloadClientMappings[0m in 0.37s
 [1m*** Started working on [4mmergeMappings[0m[0m
  ↳ Running external tool net.neoforged.installertools:installertools:2.1.2:fatjar
- [1m[92m✓[0m Completed [4mdownloadClient[0m in 0.99s
+ [1m[92m✓[0m Completed [4mdownloadClient[0m in 0.62s
 [1m*** Started working on [4mstripClient[0m[0m
- [1m[92m✓[0m Completed [4mdownloadServer[0m in 1.43s
+ [1m[92m✓[0m Completed [4mdownloadServer[0m in 0.90s
 [1m*** Started working on [4mextractServer[0m[0m
  ↳ Running external tool net.neoforged.installertools:installertools:2.1.2:fatjar
- [1m[92m✓[0m Completed [4mextractServer[0m in 0.89s
+ [1m[92m✓[0m Completed [4mextractServer[0m in 0.59s
 [1m*** Started working on [4mstripServer[0m[0m
- [1m[92m✓[0m Completed [4mmergeMappings[0m in 4.10s
- [1m[92m✓[0m Completed [4mstripServer[0m in 2.34s
- [1m[92m✓[0m Completed [4mstripClient[0m in 4.21s
+ [1m[92m✓[0m Completed [4mmergeMappings[0m in 2.95s
+ [1m[92m✓[0m Completed [4mstripServer[0m in 2.06s
+ [1m[92m✓[0m Completed [4mstripClient[0m in 3.17s
 [1m*** Started working on [4mmerge[0m[0m
  ↳ Running external tool net.neoforged:mergetool:2.0.3:fatjar
- [1m[92m✓[0m Completed [4mmerge[0m in 3.16s
+ [1m[92m✓[0m Completed [4mmerge[0m in 2.29s
 [1m*** Started working on [4mrename[0m[0m
  ↳ Running external tool net.neoforged:AutoRenamingTool:2.0.3:all
- [1m[92m✓[0m Completed [4mrename[0m in 5.53s
+ [1m[92m✓[0m Completed [4mrename[0m in 5.12s
 [1m*** Started working on [4mdecompile[0m[0m
  ↳ Running external tool org.vineflower:vineflower:1.10.1
- [1m[92m✓[0m Completed [4mdecompile[0m in 62.51s
+ [1m[92m✓[0m Completed [4mdecompile[0m in 42.40s
 [1m*** Started working on [4minject[0m[0m
- [1m[92m✓[0m Completed [4minject[0m in 2.33s
+ [1m[92m✓[0m Completed [4minject[0m in 1.48s
 [1m*** Started working on [4mpatch[0m[0m
  ↳ Running external tool io.codechicken:DiffPatch:2.0.0.36:all
- [1m[92m✓[0m Completed [4mpatch[0m in 2.65s
+ [1m[92m✓[0m Completed [4mpatch[0m in 1.61s
 [1m*** Started working on [4mapplyNeoforgePatches[0m[0m
  ↳ Running external tool io.codechicken:DiffPatch:2.0.0.36:all
- [1m[92m✓[0m Completed [4mapplyNeoforgePatches[0m in 2.07s
+ [1m[92m✓[0m Completed [4mapplyNeoforgePatches[0m in 1.43s
 [1m*** Started working on [4mtransformSources[0m[0m
  ↳ Running external tool net.neoforged.jst:jst-cli-bundle:1.0.72
- [1m[92m✓[0m Completed [4mtransformSources[0m in 8.31s
+ [1m[92m✓[0m Completed [4mtransformSources[0m in 6.44s
 [1m*** Started working on [4mrecompile[0m[0m
  109 items on the compile classpath
  0 items on the sourcepath
 [1m*** Started working on [4msourcesWithNeoForge[0m[0m
  Compiling 5364 source files
- [1m[92m✓[0m Completed [4msourcesWithNeoForge[0m in 4.95s
+ [1m[92m✓[0m Completed [4msourcesWithNeoForge[0m in 1.83s
 Copied 0 resource files
- [1m[92m✓[0m Completed [4mrecompile[0m in 37.06s
+ [1m[92m✓[0m Completed [4mrecompile[0m in 25.23s
 [1m*** Started working on [4mcompiledWithNeoForge[0m[0m
- [1m[92m✓[0m Completed [4mcompiledWithNeoForge[0m in 5.83s
+ [1m[92m✓[0m Completed [4mcompiledWithNeoForge[0m in 3.56s
 [1m*** Started working on [4msourcesAndCompiledWithNeoForge[0m[0m
- [1m[92m✓[0m Completed [4msourcesAndCompiledWithNeoForge[0m in 2.67s
-Total runtime: 138.90s
+ [1m[92m✓[0m Completed [4msourcesAndCompiledWithNeoForge[0m in 2.04s
+Total runtime: 96.64s
 
 
 > Task :compileJava
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/FallenBarracksStructure.java:7: error: cannot find symbol
-import net.minecraft.world.level.levelgen.structure.pieces.StructurePiece;
-                                                          ^
-  symbol:   class StructurePiece
-  location: package net.minecraft.world.level.levelgen.structure.pieces
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/CryptStructure.java:5: error: cannot find symbol
-import net.minecraft.world.level.levelgen.structure.pieces.StructurePiece;
-                                                          ^
-  symbol:   class StructurePiece
-  location: package net.minecraft.world.level.levelgen.structure.pieces
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/ForgottenMineStructure.java:6: error: cannot find symbol
-import net.minecraft.world.level.levelgen.structure.pieces.StructurePiece;
-                                                          ^
-  symbol:   class StructurePiece
-  location: package net.minecraft.world.level.levelgen.structure.pieces
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/RitualCryptStructure.java:6: error: cannot find symbol
-import net.minecraft.world.level.levelgen.structure.pieces.StructurePiece;
-                                                          ^
-  symbol:   class StructurePiece
-  location: package net.minecraft.world.level.levelgen.structure.pieces
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/RoyalTombStructure.java:6: error: cannot find symbol
-import net.minecraft.world.level.levelgen.structure.pieces.StructurePiece;
-                                                          ^
-  symbol:   class StructurePiece
-  location: package net.minecraft.world.level.levelgen.structure.pieces
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/RoyalTombStructure.java:16: error: cannot find symbol
-    protected StructurePiece createPiece(BlockPos pos) {
-              ^
-  symbol:   class StructurePiece
-  location: class RoyalTombStructure
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/RitualCryptStructure.java:16: error: cannot find symbol
-    protected StructurePiece createPiece(BlockPos pos) {
-              ^
-  symbol:   class StructurePiece
-  location: class RitualCryptStructure
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/ForgottenMineStructure.java:16: error: cannot find symbol
-    protected StructurePiece createPiece(BlockPos pos) {
-              ^
-  symbol:   class StructurePiece
-  location: class ForgottenMineStructure
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/FallenBarracksStructure.java:17: error: cannot find symbol
-    protected StructurePiece createPiece(BlockPos pos) {
-              ^
-  symbol:   class StructurePiece
-  location: class FallenBarracksStructure
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/CryptStructure.java:26: error: cannot find symbol
-    protected abstract StructurePiece createPiece(BlockPos pos);
-                       ^
-  symbol:   class StructurePiece
-  location: class CryptStructure
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/entity/CopperShieldSkeleton.java:178: error: cannot find symbol
-        int looting = net.neoforged.neoforge.common.CommonHooks.getLootingLevel(this, source, 0);
-                                                               ^
-  symbol:   method getLootingLevel(CopperShieldSkeleton,DamageSource,int)
-  location: class CommonHooks
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/entity/RaftEntity.java:57: error: method does not override or implement a method from a supertype
-    @Override
-    ^
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/entity/AirshipEntity.java:79: error: method does not override or implement a method from a supertype
-    @Override
-    ^
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/entity/GoldDiggerZombie.java:180: error: cannot find symbol
-        int looting = net.neoforged.neoforge.common.CommonHooks.getLootingLevel(this, source, 0);
-                                                               ^
-  symbol:   method getLootingLevel(GoldDiggerZombie,DamageSource,int)
-  location: class CommonHooks
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/init/FrontierStructures.java:28: error: incompatible types: cannot infer type-variable(s) I
-            STRUCTURE_PIECE_TYPES.register("fallen_barracks_piece", () -> (StructurePieceType) FallenBarracksPiece::new);
-                                          ^
-    (argument mismatch; bad return type in lambda expression
-      invalid constructor reference
-        no suitable constructor found for FallenBarracksPiece(StructurePieceSerializationContext,CompoundTag)
-            constructor FallenBarracksPiece.FallenBarracksPiece(BlockPos) is not applicable
-              (actual and formal argument lists differ in length)
-            constructor FallenBarracksPiece.FallenBarracksPiece(CompoundTag) is not applicable
-              (actual and formal argument lists differ in length))
-  where I,T are type-variables:
-    I extends StructurePieceType declared in method <I>register(String,Supplier<? extends I>)
-    T extends Object declared in class DeferredRegister
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/init/FrontierStructures.java:28: error: incompatible types: invalid constructor reference
-            STRUCTURE_PIECE_TYPES.register("fallen_barracks_piece", () -> (StructurePieceType) FallenBarracksPiece::new);
-                                                                                               ^
-    no suitable constructor found for FallenBarracksPiece(StructurePieceSerializationContext,CompoundTag)
-        constructor FallenBarracksPiece.FallenBarracksPiece(BlockPos) is not applicable
-          (actual and formal argument lists differ in length)
-        constructor FallenBarracksPiece.FallenBarracksPiece(CompoundTag) is not applicable
-          (actual and formal argument lists differ in length)
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/init/FrontierStructures.java:30: error: incompatible types: cannot infer type-variable(s) I
-            STRUCTURE_PIECE_TYPES.register("forgotten_mine_piece", () -> (StructurePieceType) ForgottenMinePiece::new);
-                                          ^
-    (argument mismatch; bad return type in lambda expression
-      invalid constructor reference
-        no suitable constructor found for ForgottenMinePiece(StructurePieceSerializationContext,CompoundTag)
-            constructor ForgottenMinePiece.ForgottenMinePiece(BlockPos) is not applicable
-              (actual and formal argument lists differ in length)
-            constructor ForgottenMinePiece.ForgottenMinePiece(CompoundTag) is not applicable
-              (actual and formal argument lists differ in length))
-  where I,T are type-variables:
-    I extends StructurePieceType declared in method <I>register(String,Supplier<? extends I>)
-    T extends Object declared in class DeferredRegister
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/init/FrontierStructures.java:30: error: incompatible types: invalid constructor reference
-            STRUCTURE_PIECE_TYPES.register("forgotten_mine_piece", () -> (StructurePieceType) ForgottenMinePiece::new);
-                                                                                              ^
-    no suitable constructor found for ForgottenMinePiece(StructurePieceSerializationContext,CompoundTag)
-        constructor ForgottenMinePiece.ForgottenMinePiece(BlockPos) is not applicable
-          (actual and formal argument lists differ in length)
-        constructor ForgottenMinePiece.ForgottenMinePiece(CompoundTag) is not applicable
-          (actual and formal argument lists differ in length)
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/init/FrontierStructures.java:32: error: incompatible types: cannot infer type-variable(s) I
-            STRUCTURE_PIECE_TYPES.register("ritual_crypt_piece", () -> (StructurePieceType) RitualCryptPiece::new);
-                                          ^
-    (argument mismatch; bad return type in lambda expression
-      invalid constructor reference
-        no suitable constructor found for RitualCryptPiece(StructurePieceSerializationContext,CompoundTag)
-            constructor RitualCryptPiece.RitualCryptPiece(BlockPos) is not applicable
-              (actual and formal argument lists differ in length)
-            constructor RitualCryptPiece.RitualCryptPiece(CompoundTag) is not applicable
-              (actual and formal argument lists differ in length))
-  where I,T are type-variables:
-    I extends StructurePieceType declared in method <I>register(String,Supplier<? extends I>)
-    T extends Object declared in class DeferredRegister
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/init/FrontierStructures.java:32: error: incompatible types: invalid constructor reference
-            STRUCTURE_PIECE_TYPES.register("ritual_crypt_piece", () -> (StructurePieceType) RitualCryptPiece::new);
-                                                                                            ^
-    no suitable constructor found for RitualCryptPiece(StructurePieceSerializationContext,CompoundTag)
-        constructor RitualCryptPiece.RitualCryptPiece(BlockPos) is not applicable
-          (actual and formal argument lists differ in length)
-        constructor RitualCryptPiece.RitualCryptPiece(CompoundTag) is not applicable
-          (actual and formal argument lists differ in length)
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/init/FrontierStructures.java:34: error: incompatible types: cannot infer type-variable(s) I
-            STRUCTURE_PIECE_TYPES.register("royal_tomb_piece", () -> (StructurePieceType) RoyalTombPiece::new);
-                                          ^
-    (argument mismatch; bad return type in lambda expression
-      invalid constructor reference
-        no suitable constructor found for RoyalTombPiece(StructurePieceSerializationContext,CompoundTag)
-            constructor RoyalTombPiece.RoyalTombPiece(BlockPos) is not applicable
-              (actual and formal argument lists differ in length)
-            constructor RoyalTombPiece.RoyalTombPiece(CompoundTag) is not applicable
-              (actual and formal argument lists differ in length))
-  where I,T are type-variables:
-    I extends StructurePieceType declared in method <I>register(String,Supplier<? extends I>)
-    T extends Object declared in class DeferredRegister
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/init/FrontierStructures.java:34: error: incompatible types: invalid constructor reference
-            STRUCTURE_PIECE_TYPES.register("royal_tomb_piece", () -> (StructurePieceType) RoyalTombPiece::new);
-                                                                                          ^
-    no suitable constructor found for RoyalTombPiece(StructurePieceSerializationContext,CompoundTag)
-        constructor RoyalTombPiece.RoyalTombPiece(BlockPos) is not applicable
-          (actual and formal argument lists differ in length)
-        constructor RoyalTombPiece.RoyalTombPiece(CompoundTag) is not applicable
-          (actual and formal argument lists differ in length)
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/CryptStructure.java:28: error: method does not override or implement a method from a supertype
-    @Override
-    ^
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/client/gui/RelicScreen.java:52: error: cannot find symbol
-                    new com.mojang.math.Vector3f(0.0F, 0.0F, 0.0F), 225.0F, 0.0F, this.minecraft.player);
-                                       ^
-  symbol:   class Vector3f
-  location: package com.mojang.math
+/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/client/gui/RelicScreen.java:52: error: incompatible types: float cannot be converted to Quaternionf
+                    new org.joml.Vector3f(0.0F, 0.0F, 0.0F), 225.0F, 0.0F, this.minecraft.player);
+                                                             ^
 Note: Some input files use or override a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-24 errors
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+1 error
 
 > Task :compileJava FAILED
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_2-1789402240154.json
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_2-1789402620438.json
 
 [Incubating] Problems report is available at: file:///home/runner/work/mairap/mairap/build/reports/problems/problems-report.html
 
@@ -248,166 +94,12 @@ FAILURE: Build failed with an exception.
 Execution failed for task ':compileJava'.
 > Compilation failed; see the compiler output below.
   Note: Recompile with -Xlint:deprecation for details.
-  /home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/init/FrontierStructures.java:28: error: incompatible types: cannot infer type-variable(s) I
-              STRUCTURE_PIECE_TYPES.register("fallen_barracks_piece", () -> (StructurePieceType) FallenBarracksPiece::new);
-                                            ^
-      (argument mismatch; bad return type in lambda expression
-        invalid constructor reference
-          no suitable constructor found for FallenBarracksPiece(StructurePieceSerializationContext,CompoundTag)
-              constructor FallenBarracksPiece.FallenBarracksPiece(BlockPos) is not applicable
-                (actual and formal argument lists differ in length)
-              constructor FallenBarracksPiece.FallenBarracksPiece(CompoundTag) is not applicable
-                (actual and formal argument lists differ in length))
-    where I,T are type-variables:
-      I extends StructurePieceType declared in method <I>register(String,Supplier<? extends I>)
-      T extends Object declared in class DeferredRegister
-  /home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/init/FrontierStructures.java:28: error: incompatible types: invalid constructor reference
-              STRUCTURE_PIECE_TYPES.register("fallen_barracks_piece", () -> (StructurePieceType) FallenBarracksPiece::new);
-                                                                                                 ^
-      no suitable constructor found for FallenBarracksPiece(StructurePieceSerializationContext,CompoundTag)
-          constructor FallenBarracksPiece.FallenBarracksPiece(BlockPos) is not applicable
-            (actual and formal argument lists differ in length)
-          constructor FallenBarracksPiece.FallenBarracksPiece(CompoundTag) is not applicable
-            (actual and formal argument lists differ in length)
-  /home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/init/FrontierStructures.java:30: error: incompatible types: cannot infer type-variable(s) I
-              STRUCTURE_PIECE_TYPES.register("forgotten_mine_piece", () -> (StructurePieceType) ForgottenMinePiece::new);
-                                            ^
-      (argument mismatch; bad return type in lambda expression
-        invalid constructor reference
-          no suitable constructor found for ForgottenMinePiece(StructurePieceSerializationContext,CompoundTag)
-              constructor ForgottenMinePiece.ForgottenMinePiece(BlockPos) is not applicable
-                (actual and formal argument lists differ in length)
-              constructor ForgottenMinePiece.ForgottenMinePiece(CompoundTag) is not applicable
-                (actual and formal argument lists differ in length))
-    where I,T are type-variables:
-      I extends StructurePieceType declared in method <I>register(String,Supplier<? extends I>)
-      T extends Object declared in class DeferredRegister
-  /home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/init/FrontierStructures.java:30: error: incompatible types: invalid constructor reference
-              STRUCTURE_PIECE_TYPES.register("forgotten_mine_piece", () -> (StructurePieceType) ForgottenMinePiece::new);
-                                                                                                ^
-      no suitable constructor found for ForgottenMinePiece(StructurePieceSerializationContext,CompoundTag)
-          constructor ForgottenMinePiece.ForgottenMinePiece(BlockPos) is not applicable
-            (actual and formal argument lists differ in length)
-          constructor ForgottenMinePiece.ForgottenMinePiece(CompoundTag) is not applicable
-            (actual and formal argument lists differ in length)
-  /home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/init/FrontierStructures.java:32: error: incompatible types: cannot infer type-variable(s) I
-              STRUCTURE_PIECE_TYPES.register("ritual_crypt_piece", () -> (StructurePieceType) RitualCryptPiece::new);
-                                            ^
-      (argument mismatch; bad return type in lambda expression
-        invalid constructor reference
-          no suitable constructor found for RitualCryptPiece(StructurePieceSerializationContext,CompoundTag)
-              constructor RitualCryptPiece.RitualCryptPiece(BlockPos) is not applicable
-                (actual and formal argument lists differ in length)
-              constructor RitualCryptPiece.RitualCryptPiece(CompoundTag) is not applicable
-                (actual and formal argument lists differ in length))
-    where I,T are type-variables:
-      I extends StructurePieceType declared in method <I>register(String,Supplier<? extends I>)
-      T extends Object declared in class DeferredRegister
-  /home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/init/FrontierStructures.java:32: error: incompatible types: invalid constructor reference
-              STRUCTURE_PIECE_TYPES.register("ritual_crypt_piece", () -> (StructurePieceType) RitualCryptPiece::new);
-                                                                                              ^
-      no suitable constructor found for RitualCryptPiece(StructurePieceSerializationContext,CompoundTag)
-          constructor RitualCryptPiece.RitualCryptPiece(BlockPos) is not applicable
-            (actual and formal argument lists differ in length)
-          constructor RitualCryptPiece.RitualCryptPiece(CompoundTag) is not applicable
-            (actual and formal argument lists differ in length)
-  /home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/init/FrontierStructures.java:34: error: incompatible types: cannot infer type-variable(s) I
-              STRUCTURE_PIECE_TYPES.register("royal_tomb_piece", () -> (StructurePieceType) RoyalTombPiece::new);
-                                            ^
-      (argument mismatch; bad return type in lambda expression
-        invalid constructor reference
-          no suitable constructor found for RoyalTombPiece(StructurePieceSerializationContext,CompoundTag)
-              constructor RoyalTombPiece.RoyalTombPiece(BlockPos) is not applicable
-                (actual and formal argument lists differ in length)
-              constructor RoyalTombPiece.RoyalTombPiece(CompoundTag) is not applicable
-                (actual and formal argument lists differ in length))
-    where I,T are type-variables:
-      I extends StructurePieceType declared in method <I>register(String,Supplier<? extends I>)
-      T extends Object declared in class DeferredRegister
-  /home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/init/FrontierStructures.java:34: error: incompatible types: invalid constructor reference
-              STRUCTURE_PIECE_TYPES.register("royal_tomb_piece", () -> (StructurePieceType) RoyalTombPiece::new);
-                                                                                            ^
-      no suitable constructor found for RoyalTombPiece(StructurePieceSerializationContext,CompoundTag)
-          constructor RoyalTombPiece.RoyalTombPiece(BlockPos) is not applicable
-            (actual and formal argument lists differ in length)
-          constructor RoyalTombPiece.RoyalTombPiece(CompoundTag) is not applicable
-            (actual and formal argument lists differ in length)
-  /home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/FallenBarracksStructure.java:7: error: cannot find symbol
-  import net.minecraft.world.level.levelgen.structure.pieces.StructurePiece;
-                                                            ^
-    symbol:   class StructurePiece
-    location: package net.minecraft.world.level.levelgen.structure.pieces
-  /home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/CryptStructure.java:5: error: cannot find symbol
-  import net.minecraft.world.level.levelgen.structure.pieces.StructurePiece;
-                                                            ^
-    symbol:   class StructurePiece
-    location: package net.minecraft.world.level.levelgen.structure.pieces
-  /home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/ForgottenMineStructure.java:6: error: cannot find symbol
-  import net.minecraft.world.level.levelgen.structure.pieces.StructurePiece;
-                                                            ^
-    symbol:   class StructurePiece
-    location: package net.minecraft.world.level.levelgen.structure.pieces
-  /home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/RitualCryptStructure.java:6: error: cannot find symbol
-  import net.minecraft.world.level.levelgen.structure.pieces.StructurePiece;
-                                                            ^
-    symbol:   class StructurePiece
-    location: package net.minecraft.world.level.levelgen.structure.pieces
-  /home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/RoyalTombStructure.java:6: error: cannot find symbol
-  import net.minecraft.world.level.levelgen.structure.pieces.StructurePiece;
-                                                            ^
-    symbol:   class StructurePiece
-    location: package net.minecraft.world.level.levelgen.structure.pieces
-  /home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/RoyalTombStructure.java:16: error: cannot find symbol
-      protected StructurePiece createPiece(BlockPos pos) {
-                ^
-    symbol:   class StructurePiece
-    location: class RoyalTombStructure
-  /home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/RitualCryptStructure.java:16: error: cannot find symbol
-      protected StructurePiece createPiece(BlockPos pos) {
-                ^
-    symbol:   class StructurePiece
-    location: class RitualCryptStructure
-  /home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/ForgottenMineStructure.java:16: error: cannot find symbol
-      protected StructurePiece createPiece(BlockPos pos) {
-                ^
-    symbol:   class StructurePiece
-    location: class ForgottenMineStructure
-  /home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/FallenBarracksStructure.java:17: error: cannot find symbol
-      protected StructurePiece createPiece(BlockPos pos) {
-                ^
-    symbol:   class StructurePiece
-    location: class FallenBarracksStructure
-  /home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/CryptStructure.java:26: error: cannot find symbol
-      protected abstract StructurePiece createPiece(BlockPos pos);
-                         ^
-    symbol:   class StructurePiece
-    location: class CryptStructure
-  /home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/client/gui/RelicScreen.java:52: error: cannot find symbol
-                      new com.mojang.math.Vector3f(0.0F, 0.0F, 0.0F), 225.0F, 0.0F, this.minecraft.player);
-                                         ^
-    symbol:   class Vector3f
-    location: package com.mojang.math
+  /home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/client/gui/RelicScreen.java:52: error: incompatible types: float cannot be converted to Quaternionf
+                      new org.joml.Vector3f(0.0F, 0.0F, 0.0F), 225.0F, 0.0F, this.minecraft.player);
+                                                               ^
   Note: Some input files use or override a deprecated API.
-  /home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/entity/RaftEntity.java:57: error: method does not override or implement a method from a supertype
-      @Override
-      ^
-  /home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/entity/AirshipEntity.java:79: error: method does not override or implement a method from a supertype
-      @Override
-      ^
-  /home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/CryptStructure.java:28: error: method does not override or implement a method from a supertype
-      @Override
-      ^
-  /home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/entity/CopperShieldSkeleton.java:178: error: cannot find symbol
-          int looting = net.neoforged.neoforge.common.CommonHooks.getLootingLevel(this, source, 0);
-                                                                 ^
-    symbol:   method getLootingLevel(CopperShieldSkeleton,DamageSource,int)
-    location: class CommonHooks
-  /home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/entity/GoldDiggerZombie.java:180: error: cannot find symbol
-          int looting = net.neoforged.neoforge.common.CommonHooks.getLootingLevel(this, source, 0);
-                                                                 ^
-    symbol:   method getLootingLevel(GoldDiggerZombie,DamageSource,int)
-    location: class CommonHooks
-  24 errors
+  Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+  1 error
 
 * Try:
 > Check your code and dependencies to fix the compilation error(s)
@@ -449,166 +141,12 @@ org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':compile
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
 Caused by: org.gradle.api.internal.tasks.compile.CompilationFailedException: Compilation failed; see the compiler output below.
 Note: Recompile with -Xlint:deprecation for details.
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/init/FrontierStructures.java:28: error: incompatible types: cannot infer type-variable(s) I
-            STRUCTURE_PIECE_TYPES.register("fallen_barracks_piece", () -> (StructurePieceType) FallenBarracksPiece::new);
-                                          ^
-    (argument mismatch; bad return type in lambda expression
-      invalid constructor reference
-        no suitable constructor found for FallenBarracksPiece(StructurePieceSerializationContext,CompoundTag)
-            constructor FallenBarracksPiece.FallenBarracksPiece(BlockPos) is not applicable
-              (actual and formal argument lists differ in length)
-            constructor FallenBarracksPiece.FallenBarracksPiece(CompoundTag) is not applicable
-              (actual and formal argument lists differ in length))
-  where I,T are type-variables:
-    I extends StructurePieceType declared in method <I>register(String,Supplier<? extends I>)
-    T extends Object declared in class DeferredRegister
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/init/FrontierStructures.java:28: error: incompatible types: invalid constructor reference
-            STRUCTURE_PIECE_TYPES.register("fallen_barracks_piece", () -> (StructurePieceType) FallenBarracksPiece::new);
-                                                                                               ^
-    no suitable constructor found for FallenBarracksPiece(StructurePieceSerializationContext,CompoundTag)
-        constructor FallenBarracksPiece.FallenBarracksPiece(BlockPos) is not applicable
-          (actual and formal argument lists differ in length)
-        constructor FallenBarracksPiece.FallenBarracksPiece(CompoundTag) is not applicable
-          (actual and formal argument lists differ in length)
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/init/FrontierStructures.java:30: error: incompatible types: cannot infer type-variable(s) I
-            STRUCTURE_PIECE_TYPES.register("forgotten_mine_piece", () -> (StructurePieceType) ForgottenMinePiece::new);
-                                          ^
-    (argument mismatch; bad return type in lambda expression
-      invalid constructor reference
-        no suitable constructor found for ForgottenMinePiece(StructurePieceSerializationContext,CompoundTag)
-            constructor ForgottenMinePiece.ForgottenMinePiece(BlockPos) is not applicable
-              (actual and formal argument lists differ in length)
-            constructor ForgottenMinePiece.ForgottenMinePiece(CompoundTag) is not applicable
-              (actual and formal argument lists differ in length))
-  where I,T are type-variables:
-    I extends StructurePieceType declared in method <I>register(String,Supplier<? extends I>)
-    T extends Object declared in class DeferredRegister
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/init/FrontierStructures.java:30: error: incompatible types: invalid constructor reference
-            STRUCTURE_PIECE_TYPES.register("forgotten_mine_piece", () -> (StructurePieceType) ForgottenMinePiece::new);
-                                                                                              ^
-    no suitable constructor found for ForgottenMinePiece(StructurePieceSerializationContext,CompoundTag)
-        constructor ForgottenMinePiece.ForgottenMinePiece(BlockPos) is not applicable
-          (actual and formal argument lists differ in length)
-        constructor ForgottenMinePiece.ForgottenMinePiece(CompoundTag) is not applicable
-          (actual and formal argument lists differ in length)
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/init/FrontierStructures.java:32: error: incompatible types: cannot infer type-variable(s) I
-            STRUCTURE_PIECE_TYPES.register("ritual_crypt_piece", () -> (StructurePieceType) RitualCryptPiece::new);
-                                          ^
-    (argument mismatch; bad return type in lambda expression
-      invalid constructor reference
-        no suitable constructor found for RitualCryptPiece(StructurePieceSerializationContext,CompoundTag)
-            constructor RitualCryptPiece.RitualCryptPiece(BlockPos) is not applicable
-              (actual and formal argument lists differ in length)
-            constructor RitualCryptPiece.RitualCryptPiece(CompoundTag) is not applicable
-              (actual and formal argument lists differ in length))
-  where I,T are type-variables:
-    I extends StructurePieceType declared in method <I>register(String,Supplier<? extends I>)
-    T extends Object declared in class DeferredRegister
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/init/FrontierStructures.java:32: error: incompatible types: invalid constructor reference
-            STRUCTURE_PIECE_TYPES.register("ritual_crypt_piece", () -> (StructurePieceType) RitualCryptPiece::new);
-                                                                                            ^
-    no suitable constructor found for RitualCryptPiece(StructurePieceSerializationContext,CompoundTag)
-        constructor RitualCryptPiece.RitualCryptPiece(BlockPos) is not applicable
-          (actual and formal argument lists differ in length)
-        constructor RitualCryptPiece.RitualCryptPiece(CompoundTag) is not applicable
-          (actual and formal argument lists differ in length)
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/init/FrontierStructures.java:34: error: incompatible types: cannot infer type-variable(s) I
-            STRUCTURE_PIECE_TYPES.register("royal_tomb_piece", () -> (StructurePieceType) RoyalTombPiece::new);
-                                          ^
-    (argument mismatch; bad return type in lambda expression
-      invalid constructor reference
-        no suitable constructor found for RoyalTombPiece(StructurePieceSerializationContext,CompoundTag)
-            constructor RoyalTombPiece.RoyalTombPiece(BlockPos) is not applicable
-              (actual and formal argument lists differ in length)
-            constructor RoyalTombPiece.RoyalTombPiece(CompoundTag) is not applicable
-              (actual and formal argument lists differ in length))
-  where I,T are type-variables:
-    I extends StructurePieceType declared in method <I>register(String,Supplier<? extends I>)
-    T extends Object declared in class DeferredRegister
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/init/FrontierStructures.java:34: error: incompatible types: invalid constructor reference
-            STRUCTURE_PIECE_TYPES.register("royal_tomb_piece", () -> (StructurePieceType) RoyalTombPiece::new);
-                                                                                          ^
-    no suitable constructor found for RoyalTombPiece(StructurePieceSerializationContext,CompoundTag)
-        constructor RoyalTombPiece.RoyalTombPiece(BlockPos) is not applicable
-          (actual and formal argument lists differ in length)
-        constructor RoyalTombPiece.RoyalTombPiece(CompoundTag) is not applicable
-          (actual and formal argument lists differ in length)
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/FallenBarracksStructure.java:7: error: cannot find symbol
-import net.minecraft.world.level.levelgen.structure.pieces.StructurePiece;
-                                                          ^
-  symbol:   class StructurePiece
-  location: package net.minecraft.world.level.levelgen.structure.pieces
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/CryptStructure.java:5: error: cannot find symbol
-import net.minecraft.world.level.levelgen.structure.pieces.StructurePiece;
-                                                          ^
-  symbol:   class StructurePiece
-  location: package net.minecraft.world.level.levelgen.structure.pieces
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/ForgottenMineStructure.java:6: error: cannot find symbol
-import net.minecraft.world.level.levelgen.structure.pieces.StructurePiece;
-                                                          ^
-  symbol:   class StructurePiece
-  location: package net.minecraft.world.level.levelgen.structure.pieces
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/RitualCryptStructure.java:6: error: cannot find symbol
-import net.minecraft.world.level.levelgen.structure.pieces.StructurePiece;
-                                                          ^
-  symbol:   class StructurePiece
-  location: package net.minecraft.world.level.levelgen.structure.pieces
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/RoyalTombStructure.java:6: error: cannot find symbol
-import net.minecraft.world.level.levelgen.structure.pieces.StructurePiece;
-                                                          ^
-  symbol:   class StructurePiece
-  location: package net.minecraft.world.level.levelgen.structure.pieces
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/RoyalTombStructure.java:16: error: cannot find symbol
-    protected StructurePiece createPiece(BlockPos pos) {
-              ^
-  symbol:   class StructurePiece
-  location: class RoyalTombStructure
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/RitualCryptStructure.java:16: error: cannot find symbol
-    protected StructurePiece createPiece(BlockPos pos) {
-              ^
-  symbol:   class StructurePiece
-  location: class RitualCryptStructure
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/ForgottenMineStructure.java:16: error: cannot find symbol
-    protected StructurePiece createPiece(BlockPos pos) {
-              ^
-  symbol:   class StructurePiece
-  location: class ForgottenMineStructure
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/FallenBarracksStructure.java:17: error: cannot find symbol
-    protected StructurePiece createPiece(BlockPos pos) {
-              ^
-  symbol:   class StructurePiece
-  location: class FallenBarracksStructure
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/CryptStructure.java:26: error: cannot find symbol
-    protected abstract StructurePiece createPiece(BlockPos pos);
-                       ^
-  symbol:   class StructurePiece
-  location: class CryptStructure
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/client/gui/RelicScreen.java:52: error: cannot find symbol
-                    new com.mojang.math.Vector3f(0.0F, 0.0F, 0.0F), 225.0F, 0.0F, this.minecraft.player);
-                                       ^
-  symbol:   class Vector3f
-  location: package com.mojang.math
+/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/client/gui/RelicScreen.java:52: error: incompatible types: float cannot be converted to Quaternionf
+                    new org.joml.Vector3f(0.0F, 0.0F, 0.0F), 225.0F, 0.0F, this.minecraft.player);
+                                                             ^
 Note: Some input files use or override a deprecated API.
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/entity/RaftEntity.java:57: error: method does not override or implement a method from a supertype
-    @Override
-    ^
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/entity/AirshipEntity.java:79: error: method does not override or implement a method from a supertype
-    @Override
-    ^
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/world/structure/CryptStructure.java:28: error: method does not override or implement a method from a supertype
-    @Override
-    ^
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/entity/CopperShieldSkeleton.java:178: error: cannot find symbol
-        int looting = net.neoforged.neoforge.common.CommonHooks.getLootingLevel(this, source, 0);
-                                                               ^
-  symbol:   method getLootingLevel(CopperShieldSkeleton,DamageSource,int)
-  location: class CommonHooks
-/home/runner/work/mairap/mairap/src/main/java/com/frontier/frontier/entity/GoldDiggerZombie.java:180: error: cannot find symbol
-        int looting = net.neoforged.neoforge.common.CommonHooks.getLootingLevel(this, source, 0);
-                                                               ^
-  symbol:   method getLootingLevel(GoldDiggerZombie,DamageSource,int)
-  location: class CommonHooks
-24 errors
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+1 error
 	at org.gradle.api.internal.tasks.compile.JdkJavaCompiler.execute(JdkJavaCompiler.java:89)
 	at org.gradle.api.internal.tasks.compile.JdkJavaCompiler.execute(JdkJavaCompiler.java:50)
 	at org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler.delegateAndHandleErrors(NormalizingJavaCompiler.java:98)
@@ -761,5 +299,5 @@ Note: Some input files use or override a deprecated API.
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
 
 
-BUILD FAILED in 2m 53s
+BUILD FAILED in 2m 28s
 2 actionable tasks: 2 executed
