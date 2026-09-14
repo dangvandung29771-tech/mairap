@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "FSF",
+    " S "
+  ],
+  "key": {
+    "S": {
+      "item": "frontier:ancient_shard"
+    },
+    "F": {
+      "item": "minecraft:feather"
+    }
+  },
+  "result": {
+    "id": "frontier:feather_of_grace",
+    "count": 1
+  }
+}

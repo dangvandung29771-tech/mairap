@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "frontier:fallen_barracks",
+    "frontier:forgotten_mine",
+    "frontier:ritual_crypt",
+    "frontier:royal_tomb"
+  ]
+}

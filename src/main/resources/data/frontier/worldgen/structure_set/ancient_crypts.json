@@ -1,0 +1,26 @@
+{
+  "structures": [
+    {
+      "structure": "frontier:fallen_barracks",
+      "weight": 3
+    },
+    {
+      "structure": "frontier:forgotten_mine",
+      "weight": 3
+    },
+    {
+      "structure": "frontier:ritual_crypt",
+      "weight": 2
+    },
+    {
+      "structure": "frontier:royal_tomb",
+      "weight": 2
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 22,
+    "separation": 8,
+    "salt": 1460197
+  }
+}

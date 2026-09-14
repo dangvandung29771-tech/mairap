@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "RNR",
+    " S "
+  ],
+  "key": {
+    "S": {
+      "item": "frontier:ancient_shard"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "N": {
+      "item": "minecraft:nether_wart"
+    }
+  },
+  "result": {
+    "id": "frontier:blood_crystal",
+    "count": 1
+  }
+}

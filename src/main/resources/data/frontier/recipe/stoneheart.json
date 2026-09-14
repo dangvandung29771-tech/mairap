@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "DHD",
+    " S "
+  ],
+  "key": {
+    "S": {
+      "item": "frontier:ancient_shard"
+    },
+    "D": {
+      "item": "minecraft:deepslate"
+    },
+    "H": {
+      "item": "minecraft:heart_of_the_sea"
+    }
+  },
+  "result": {
+    "id": "frontier:stoneheart",
+    "count": 1
+  }
+}

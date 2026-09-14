@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "EPE",
+    " S "
+  ],
+  "key": {
+    "S": {
+      "item": "frontier:ancient_shard"
+    },
+    "E": {
+      "item": "minecraft:ender_pearl"
+    },
+    "P": {
+      "item": "minecraft:purpur_block"
+    }
+  },
+  "result": {
+    "id": "frontier:void_crystal",
+    "count": 1
+  }
+}

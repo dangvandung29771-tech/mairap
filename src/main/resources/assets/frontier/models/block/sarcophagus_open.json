@@ -1,0 +1,74 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "sarc": "frontier:block/sarcophagus_side",
+    "lid": "frontier:block/sarcophagus_lid",
+    "particle": "frontier:block/sarcophagus_side"
+  },
+  "elements": [
+    {
+      "from": [
+        1,
+        0,
+        1
+      ],
+      "to": [
+        15,
+        8,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#sarc"
+        },
+        "south": {
+          "texture": "#sarc"
+        },
+        "east": {
+          "texture": "#sarc"
+        },
+        "west": {
+          "texture": "#sarc"
+        },
+        "up": {
+          "texture": "#sarc"
+        },
+        "down": {
+          "texture": "#sarc"
+        }
+      }
+    },
+    {
+      "from": [
+        2,
+        8,
+        11
+      ],
+      "to": [
+        14,
+        10,
+        14
+      ],
+      "faces": {
+        "north": {
+          "texture": "#lid"
+        },
+        "south": {
+          "texture": "#lid"
+        },
+        "east": {
+          "texture": "#lid"
+        },
+        "west": {
+          "texture": "#lid"
+        },
+        "up": {
+          "texture": "#lid"
+        },
+        "down": {
+          "texture": "#lid"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "block.master_grindstone.grind": {
+    "sounds": [{"name": "minecraft:dig/stone1", "volume": 0.9, "pitch": 0.7}, {"name": "minecraft:dig/stone2", "volume": 0.9, "pitch": 0.6}],
+    "subtitle": "subtitles.frontier.grindstone.grind"
+  },
+  "block.master_grindstone.impact": {
+    "sounds": [{"name": "minecraft:random/anvil_use", "volume": 0.55, "pitch": 1.3}],
+    "subtitle": "subtitles.frontier.grindstone.impact"
+  },
+  "block.master_grindstone.complete": {
+    "sounds": [{"name": "minecraft:random/levelup", "volume": 0.7, "pitch": 1.1}],
+    "subtitle": "subtitles.frontier.grindstone.complete"
+  },
+  "ambient.crypt": {
+    "sounds": [{"name": "minecraft:ambient/cave/cave1", "volume": 0.9}],
+    "subtitle": "subtitles.frontier.crypt.ambient"
+  },
+  "block.crypt_door.open": {
+    "sounds": [{"name": "minecraft:random/door_open", "volume": 0.9, "pitch": 0.6}],
+    "subtitle": "subtitles.frontier.crypt_door"
+  },
+  "block.rune.activate": {
+    "sounds": [{"name": "minecraft:note/pling", "volume": 0.9, "pitch": 1.6}],
+    "subtitle": "subtitles.frontier.rune"
+  },
+  "entity.large_raft.creak": {
+    "sounds": [{"name": "minecraft:dig/wood1", "volume": 0.7, "pitch": 0.7}, {"name": "minecraft:dig/wood3", "volume": 0.7, "pitch": 0.6}],
+    "subtitle": "subtitles.frontier.raft.creak"
+  },
+  "entity.large_raft.water": {
+    "sounds": [{"name": "minecraft:random/splash", "volume": 0.5, "pitch": 0.9}],
+    "subtitle": "subtitles.frontier.raft.water"
+  },
+  "entity.pocket_airship.engine": {
+    "sounds": [{"name": "minecraft:fire/fire", "volume": 0.8, "stream": true}],
+    "subtitle": "subtitles.frontier.airship.engine"
+  },
+  "entity.pocket_airship.steam": {
+    "sounds": [{"name": "minecraft:random/fizz", "volume": 0.5, "pitch": 1.2}],
+    "subtitle": "subtitles.frontier.airship.steam"
+  },
+  "item.relic.activate": {
+    "sounds": [{"name": "minecraft:note/pling", "volume": 0.6, "pitch": 1.9}],
+    "subtitle": "subtitles.frontier.relic"
+  },
+  "block.sprinkler.spray": {
+    "sounds": [{"name": "minecraft:random/splash", "volume": 0.3, "pitch": 1.4}],
+    "subtitle": "subtitles.frontier.sprinkler"
+  }
+}

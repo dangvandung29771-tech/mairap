@@ -1,0 +1,36 @@
+{
+  "variants": {
+    "facing=south,opened=false": {
+      "model": "frontier:block/sarcophagus",
+      "y": 0
+    },
+    "facing=west,opened=false": {
+      "model": "frontier:block/sarcophagus",
+      "y": 90
+    },
+    "facing=north,opened=false": {
+      "model": "frontier:block/sarcophagus",
+      "y": 180
+    },
+    "facing=east,opened=false": {
+      "model": "frontier:block/sarcophagus",
+      "y": 270
+    },
+    "facing=south,opened=true": {
+      "model": "frontier:block/sarcophagus_open",
+      "y": 0
+    },
+    "facing=west,opened=true": {
+      "model": "frontier:block/sarcophagus_open",
+      "y": 90
+    },
+    "facing=north,opened=true": {
+      "model": "frontier:block/sarcophagus_open",
+      "y": 180
+    },
+    "facing=east,opened=true": {
+      "model": "frontier:block/sarcophagus_open",
+      "y": 270
+    }
+  }
+}

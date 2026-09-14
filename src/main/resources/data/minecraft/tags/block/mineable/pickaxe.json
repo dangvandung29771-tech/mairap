@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "frontier:master_grindstone",
+    "frontier:ancient_stone",
+    "frontier:ancient_stone_bricks",
+    "frontier:cracked_ancient_stone_bricks",
+    "frontier:chiseled_ancient_stone",
+    "frontier:ancient_rune_block",
+    "frontier:ancient_secret_door",
+    "frontier:sarcophagus",
+    "frontier:stone_pipe"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "water_level=0": {
+      "model": "frontier:block/stone_pipe"
+    },
+    "water_level=1": {
+      "model": "frontier:block/stone_pipe"
+    },
+    "water_level=2": {
+      "model": "frontier:block/stone_pipe"
+    },
+    "water_level=3": {
+      "model": "frontier:block/stone_pipe"
+    }
+  }
+}

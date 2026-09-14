@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "frontier:master_grindstone"
+    },
+    "title": {
+      "translate": "advancements.frontier.root.title"
+    },
+    "description": {
+      "translate": "advancements.frontier.root.description"
+    },
+    "background": "frontier:textures/block/ancient_stone_bricks.png",
+    "announce_to_chat": false,
+    "show_toast": false
+  },
+  "criteria": {
+    "crafting_table": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:crafting_table"
+          }
+        ]
+      }
+    }
+  }
+}

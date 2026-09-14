@@ -1,0 +1,34 @@
+{
+  "parent": "frontier:root",
+  "display": {
+    "icon": {
+      "id": "frontier:sharp_whetstone"
+    },
+    "title": {
+      "translate": "advancements.frontier.master_forge.title"
+    },
+    "description": {
+      "translate": "advancements.frontier.master_forge.description"
+    },
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "used_grindstone": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "frontier:master_grindstone"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

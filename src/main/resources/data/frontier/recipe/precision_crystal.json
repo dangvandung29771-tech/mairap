@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "QAQ",
+    " S "
+  ],
+  "key": {
+    "S": {
+      "item": "frontier:ancient_shard"
+    },
+    "Q": {
+      "item": "minecraft:quartz"
+    },
+    "A": {
+      "item": "minecraft:amethyst_shard"
+    }
+  },
+  "result": {
+    "id": "frontier:precision_crystal",
+    "count": 1
+  }
+}

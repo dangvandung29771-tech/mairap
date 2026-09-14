@@ -1,0 +1,67 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.42'
+}
+
+version = modVersion
+group = 'com.frontier'
+
+base {
+    archivesName = 'frontier'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    version = project.neoForgeVersion
+
+    runs {
+        client {
+            client()
+            systemProperty 'neoforge.enabledGameTestNamespaces', 'frontier'
+        }
+        server {
+            server()
+            programArgument '--nogui'
+        }
+        data {
+            data()
+        }
+    }
+
+    mods {
+        frontier {
+            sourceSet(sourceSets.main)
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.neoforged.net/releases' }
+    // Optional soft dependency (not required to build):
+    // maven { url = 'https://maven.theillusivec4.top/' } // Curios API
+}
+
+dependencies {
+    // Soft, compile-time-optional Curios integration is handled reflectively
+    // at runtime (see com.frontier.frontier.relic.CuriosInterop) so the mod
+    // builds with zero hard dependencies beyond NeoForge itself.
+}
+
+processResources {
+    var replaceProperties = [
+        minecraft_version   : project.minecraftVersion,
+        neo_version         : project.neoForgeVersion,
+        mod_version         : version,
+        resource_pack_format: 34,
+    ]
+    inputs.properties replaceProperties
+    filesMatching(['META-INF/neoforge.mods.toml', 'pack.mcmeta']) {
+        expand replaceProperties + [project: project]
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}

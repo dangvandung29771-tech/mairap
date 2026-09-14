@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "frontier:block/ancient_rune_block"
+    },
+    "lit=true": {
+      "model": "frontier:block/ancient_rune_block_lit"
+    }
+  }
+}
