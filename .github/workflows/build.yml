@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Clean stale CI output
-        run: rm -rf ci-out
+        run: rm -rf ci-out release
 
       - name: Set up JDK 21
         uses: actions/setup-java@v4
@@ -35,7 +35,7 @@ jobs:
           echo "BUILD_EXIT=${PIPESTATUS[0]}" >> $GITHUB_ENV
           set -e
 
-      - name: Upload mod jar
+      - name: Upload mod jar artifact
         if: env.BUILD_EXIT == '0'
         uses: actions/upload-artifact@v4
         with:
@@ -43,15 +43,15 @@ jobs:
           path: build/libs/*.jar
           if-no-files-found: error
 
-      - name: Publish jar to repo
+      - name: Publish built jar into repo
         if: env.BUILD_EXIT == '0'
         run: |
           mkdir -p release
-          cp build/libs/*.jar release/
+          cp build/libs/frontier-1.0.0.jar release/
           git config user.name "ci-bot"
           git config user.email "ci-bot@users.noreply.github.com"
           git add -f release
-          git commit -m "ci: publish built mod jar"
+          git commit -m "ci: publish built frontier-1.0.0.jar"
           git push origin HEAD:${{ github.ref_name }}
 
       - name: Publish build log on failure
